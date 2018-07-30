@@ -8,28 +8,30 @@
 // ## Brief
 //
 // Using your knowledge about scope and variable declarations in JavaScript, look at the following code snippets and predict what the output or error will be and why.
+//
+// #### Episode 2
 
 
+const murderer = 'Professor Plum';
 
-// #### Episode 1
-
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Library',
-  weapon: 'Rope'
-};
-
-const declareMurderer = function() {
-  return `The murderer is ${scenario.murderer}.`;
+const changeMurderer = function() {
+  murderer = 'Mrs. Peacock';
 }
 
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
 
 // RETURN I WOULD EXPECT:
-// `The murderer is Miss Scarlet'
-// REASON: A constants scope can be either global or local
+// `The murderer is Professor Plum'
+// REASON: A constant can not be overridden
+
 
 // TEXT ACTUALLY RETURNED:
-// `The murderer is Miss Scarlet'
+// `TypeError: Assignment to constant variable.
+// Javascript wouldn't allow 'Prof Plum' to be over-written over by 'Mrs Peacock'
