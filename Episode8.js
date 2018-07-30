@@ -64,8 +64,5 @@ console.log(verdict);
 
 
 
-
-
-
 // TEXT ACTUALLY RETURNED:
-// "The murderer is Mr Green.
+// "The weapon is candelStick
